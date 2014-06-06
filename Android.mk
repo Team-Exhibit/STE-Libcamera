@@ -43,6 +43,9 @@ LOCAL_C_INCLUDES += external/jhead
 LOCAL_C_INCLUDES += external/neven/FaceRecEm/common/src/b_FDSDK
 LOCAL_C_INCLUDES += frameworks/native/include/media/hardware
 
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+
 #internal includes
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/debug
@@ -106,7 +109,7 @@ LOCAL_SHARED_LIBRARIES := \
                          libcutils \
                          libbinder \
                          libblt_hw \
-                         libexif \
+                         libjhead \
                          libui \
                          libFFTEm \
                          libZXImg \
